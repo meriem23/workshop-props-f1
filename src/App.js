@@ -1,22 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Child1 from "./components/Child1";
+import Child2 from "./components/Child2";
 
 function App() {
+  let name = "Ali";
+  let age = 15;
+  let isMarried = true;
+  let essmi = "Esra";
+  const alertMe = () => {
+    alert("Hello from workshop");
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Hello from workshop</h1>
+        <Child1 name={name} age={age} mar={isMarried} alertMe={alertMe} />
+        <Child2 essmi={essmi} />
       </header>
     </div>
   );
